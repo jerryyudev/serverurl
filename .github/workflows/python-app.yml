@@ -26,9 +26,9 @@ jobs:
 
     - name: Run Server
       run: |
-        nohup python server-v2.4.py &
+        nohup python server.py &
         sleep 10  # 可根据需要调整等待时间
         ps -ef | grep python  # 检查进程是否在运行
 
     - name: Keep job alive (for testing purposes)
-      run: sleep 600
+      run: sleep 60
